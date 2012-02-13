@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  is_on_list: false
+  has_been_bought: false
+  position: 1
+
+two:
+  name: MyString
+  is_on_list: false
+  has_been_bought: false
+  position: 1

@@ -1,0 +1,10 @@
+%h1
+  Shopping Items
+
+#shopping_items
+
+= content_for :javascript do 
+  :javascript
+    $(function() {
+      ShoppingListApp.init( {shopping_items: #{@shopping_items.to_json} });
+    });

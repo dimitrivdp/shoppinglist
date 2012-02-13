@@ -1,0 +1,37 @@
+$row_header_width:              200px
+
+header
+  margin:   20px 10px 10px 10px
+  overflow: hidden
+  
+nav
+  overflow: hidden
+  margin:   0px  0px  10px 0px
+  
+section
+  margin:   0px 10px 0px 10px
+  
+  
+#logo
+  float:           left
+  width:           $row_header_width
+  padding:         0px
+  text-decoration: none
+  
+= custom_button($main_color)
+  +sassy-button-gradient("shiny", $main_color)
+  +border-radius(6px)
+  margin:       7px 0px 0px 10px
+  padding:      4px 10px
+  text-align:   center
+  float:        left
+  font-size:    16px
+  height:       20px
+  padding-top:  4px
+  img
+    height: 16px
+  a
+    +clean_link(white)
+
+.menu_bar_button
+  +custom_button($main)

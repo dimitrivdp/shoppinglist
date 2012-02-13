@@ -1,0 +1,166 @@
+$resource_table_width: 100%
+
+$resource_tab_width :                 200px
+$resource_tab_background :            #F0F0F0 //$second_gray_extra_light
+$resource_tab_background_highlight :  #E0E0E0 //$second_gray_extra_light
+$resource_tab_color_highlight :       white
+
+$resource_table_grid:    50px
+$resource_table_padding: 5px
+$resource_table_height:  40px
+
+=resource_table_width($arg)
+  width: ($arg * $resource_table_grid) - (($resource_table_padding + 2px) * 2)
+
+=resource_tab_box_padding
+  padding:      10px  
+  
+=resource_tab_box_color_highlight
+  background:   $main
+  color:        $resource_tab_color_highlight
+
+=resource_margin
+  margin:           15px 0px
+
+// RESOURCE
+.resource
+  overflow: hidden
+  
+  h2
+    color:          $main
+  
+// RESOURCE FORM
+.resource_page
+  float: left
+
+// RESOURCE TAB
+
+.resource_side
+  float: right
+  margin:       0px 10px 0px 0px
+  
+.resource_tab
+  +border-radius(8px)
+  width:        $resource_tab_width
+  background:   $resource_tab_background
+  padding:      8px 0px 16px 0px
+  margin:       0px 0px 0px 10px
+  
+.resource_tab_title
+  +resource_tab_box_padding
+  
+.resource_tab_items
+  padding:      0px
+  
+.resourse_tab_item
+  +resource_tab_box_padding
+  a
+    color:     $main
+  
+.active
+  +resource_tab_box_color_highlight
+  a
+    text-decoration:   none
+    color:             white
+    
+    &:visited
+      color:             white
+  
+.resource_tab_footer
+  +resource_tab_box_padding
+
+// RESOURCE FORM
+.resource_form
+  +resource_margin
+
+// RESOURCE FILTER
+.resource_filter
+  +resource_margin
+  
+// RESOURCE TITLE
+.resource_title
+  color:              $main
+  font-size:          18px
+  
+// RESOURCE TABLE
+.resource_table
+  display:      table
+  +resource_margin
+  width: $resource_table_width
+  table-layout: auto
+  
+.resource_row
+  display:      table-row
+  &:nth-of-type(even)
+    background-color:   $resource_tab_background
+  &:nth-of-type(odd)
+    background-color:   $resource_tab_background_highlight
+  &.list
+    +border-radius(6px)
+    margin:     20px 0px
+  
+.resource_cell
+  overflow:       auto
+  padding:        5px
+  border:         1px solid white
+  display:        table-cell
+  vertical-align: middle
+  
+  &.resource_date
+    +resource_table_width(2)
+    text-align:   center
+  &.resource_icon
+    +resource_table_width(1)
+    text-align:   center
+  &.resource_name
+  &.resource_state
+    +resource_table_width(3)
+  &.resource_kind
+    +resource_table_width(2)
+  &.resource_actions
+    +resource_table_width(1)
+    
+.resource_actions_list
+  
+= resource_icon_with_text($url, $background)
+  background:          $background
+  +resource_background($url)
+  padding:             6px 10px 0px 34px
+  height:              24px
+  width:               60px
+  background-size:     22px
+  background-position: 5px center
+  text-decoration:     none
+  color:               white
+
+a.resource_action_button
+  text-decoration:     none
+  +sassy-button
+  +sassy-button-gradient("shiny", $main)
+  //color:               white
+  
+
+a.resource_action
+  float: left
+  //+sassy-button
+  
+  +border-radius(7px)
+  //+box-shadow
+  display:         block
+  width:           30px
+  height:          30px
+  margin:          2px
+  background:      $main
+  &.show
+    +resource_background("glyphishpro/icons/icons-white/06-magnify.png")
+  &.edit
+    +resource_background("glyphishpro/icons/icons-white/187-pencil.png")
+  &.destroy
+    +resource_background("glyphishpro/xtras/xtras-white/60-x.png")
+  &.move
+    +resource_icon_with_text("glyphishpro/xtras/xtras-white/11-arrows-out.png", $main)    
+  &.target
+    +resource_icon_with_text("glyphishpro/icons/icons-white/13-target.png", $second)
+  &.moving
+    +resource_icon_with_text("glyphishpro/xtras/xtras-white/46-no.png", gray)
+    

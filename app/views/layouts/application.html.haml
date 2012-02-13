@@ -1,0 +1,29 @@
+!!! Strict
+
+%html
+  %head
+    %title Shopping List
+    %meta(name="viewport" content="width=560px")
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+    = env_meta_tags
+
+  %body
+    #container
+      %header
+        %nav
+          .menu_bar_button
+            = link_to "rails scaffold", shopping_items_path
+          .menu_bar_button
+            = link_to "backbone app", :root
+          .menu_bar_button
+            = link_to "jasmine", "/jasmine"
+      %section
+        #main_title
+          = yield :title
+        
+        #main_page
+          = yield
+    
+    = yield :javascript

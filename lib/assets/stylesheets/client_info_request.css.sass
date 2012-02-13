@@ -1,0 +1,49 @@
+$client_content_padding:     15px
+$client_form_width:          800px
+$page_padding:               20px
+$message_color:              #555555
+
+
+.client_message
+  +border_radius(6px)
+  background:     white
+  border:         1px solid $main
+  float:          none
+  width:          $client_form_width - 40px
+  color:          $message_color
+  padding:        20px
+  margin:         20px 0px
+  
+  .client_message_icon
+    background-image:    image-url("glyphishpro/icons/icons-gray/123-id-card@2x.png")
+    background-repeat:   no-repeat
+    background-position: center center
+    width:               60px
+    height:              60px
+    margin:              10px
+    float:               left
+  
+  .client_message_text
+    margin:              20px 10px 10px 90px
+    
+  p, li
+    margin:      0px 0px 14px 0px
+    font-size:   18px
+    line-height: 24px
+
+.client_form
+  +border_radius(6px)
+  background:     white
+  padding:        0px
+  border:         1px solid $main
+  margin:         20px 0px
+  width:          $client_form_width
+  
+  .client_form_title
+    background:     $main
+    color:          white
+    padding:        $client_content_padding
+    font-size:      18px
+  
+  .client_form_content
+    padding:        $client_content_padding

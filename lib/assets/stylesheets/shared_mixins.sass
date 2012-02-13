@@ -1,0 +1,17 @@
+= resource_background($arg)
+  background-image: image-url($arg)
+  background-repeat: no-repeat
+  background-position: center center
+  
+= clean_link($link_color)
+  color:            $link_color
+  text-decoration:  none
+
+  &:visited
+    color:            $link_color
+    text-decoration:  none
+
+  &:hoover
+    color:            $link_color
+    text-decoration:  none
+    

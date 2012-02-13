@@ -1,0 +1,22 @@
+.resource_cell.resource_actions
+  .resource_actions_list
+    %a.resource_action.move(href="#")
+      move
+    %a.resource_action.moving(href="#")
+      moving
+    %a.resource_action.target(href="#")
+      target
+  
+#name.resource_cell.resource_name
+  = "<%= shopping_item.get('name') %>".html_safe
+.resource_cell.resource_checkbox
+  %input(type="checkbox" id="on_list")
+  %label
+    on list
+.resource_cell.resource_checkbox
+  %input(type="checkbox" id="in_cart")
+  %label
+    in cart
+.resource_cell.resource_actions
+  .resource_actions_list
+    = link_to "", "#", :class => [:resource_action, :destroy]  

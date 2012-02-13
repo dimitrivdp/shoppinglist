@@ -1,0 +1,170 @@
+$line_color:            #aaaaaa
+$label_color:           #555555
+
+$label_width:           100px
+$label_field_distance:  10px
+
+$input_width_s:         145px
+$input_width_m:         290px
+$input_width_l:         435px
+$input_width_xl:        580px
+
+.bbf-form
+  margin:         0
+  padding:        0
+  border:         none
+  font-size:      16px
+  font-family:    Helvetica, Arial
+  color:          $label_color
+  
+  legend
+    font-size:      18px
+    border-top:     1px solid $line_color
+    width:          100%
+    padding:        5px 0px 0px 0px
+  
+  fieldset
+    border:         none
+    padding:        5px 0px 10px 0px
+    
+  ul
+    padding:        0px 
+
+.bbf-field
+  list-style-type:  none
+  margin:           5px 0px
+  display:          block
+  clear:            left
+  height:           auto
+  overflow:         hidden
+
+  label 
+    float:          left
+    width:          $label_width
+    text-align:     right
+    margin:         6px 0px 5px 0px
+  
+  .bbf-editor 
+    margin:        0px 0px 0px $label_width + $label_field_distance
+  
+  //input
+  //  height:         16px
+  
+  input, textarea, select 
+    font-size:      16px
+    width:          100%
+    
+  input, textarea 
+    +border-radius(6px)
+    margin:         2px 0px 7px 0px
+    padding:        5px 5px
+    border:         1px solid $line_color
+    
+  select
+    margin:         5px 0px 5px 0px
+    width:          $input_width_m + 12px
+    
+  input
+    width:          $input_width_m
+    &.small
+      width:       $input_width_s
+    &.medium
+      width:       $input_width_m
+    &.large
+      width:       $input_width_l
+    &.extra_large
+      width:       $input_width_xl
+    
+  textarea
+    width:          $input_width_xl
+        
+  input[type=checkbox]
+    margin:      8px 0px 2px 0px
+    padding:     0px
+    width:       14px  
+  
+  input[type=submit]
+    padding:    5px
+    background: orange
+    color:      white
+    height:     auto
+    width:      $input_width_m + 12px
+
+.bbf-submit
+  width:       100%
+  margin:      20px 0px 20px $label_width + $label_field_distance
+
+  
+.bbf-error 
+  outline: 1px solid red
+
+.bbf-date input, .bbf-datetime input 
+  width: 100px
+  text-align: center
+
+.bbf-datetime input 
+  margin-right:   1em
+
+.bbf-datetime select 
+  width:          50px
+  text-align:     center
+
+.bbf-list 
+  list-style-type: none
+
+.bbf-list ul 
+  border: 1px solid #ccc
+  border-bottom: none
+  max-height: 150px
+  overflow: auto
+  margin: 0
+  padding: 0
+  
+
+.bbf-list li 
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+  height: 16px
+  background: #fff
+  padding: 4px
+  margin: 0
+  list-style-type: none
+  margin-top: -1px
+  position: relative
+  
+.bbf-list-sortable li 
+  cursor: move
+
+.bbf-list .bbf-list-actions 
+  position: absolute
+  top: 2px
+  right: 2px
+
+
+.bbf-list .bbf-list-actions button 
+  width: 19px
+  height: 19px
+
+
+.bbf-list .bbf-list-add 
+  width: 100%
+  height: 20px
+  margin-top: -2px
+    
+.bbf-list-editor 
+  width: 98%
+
+.bbf-radio 
+  list-style-type:   none
+  margin:            6px 0px 5px 0px
+  
+  li
+    float:       left
+    margin:      0px 10px 0px 0px
+    
+  input[type=radio]
+    width:       16px
+ 
+  label 
+    margin: 0px 0px 0px 5px
+    float: none
